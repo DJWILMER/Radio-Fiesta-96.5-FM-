@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Radio Fiesta 96.5 FM">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a2a6b"/>
+      <stop offset="0.5" stop-color="#0b3f8f"/>
+      <stop offset="1" stop-color="#07122b"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e6fff"/>
+      <stop offset="0.5" stop-color="#19c37d"/>
+      <stop offset="1" stop-color="#ffd233"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="222" r="120" fill="none" stroke="url(#ring)" stroke-width="16" opacity="0.9"/>
+  <circle cx="256" cy="222" r="72" fill="#ffd233"/>
+  <circle cx="256" cy="222" r="30" fill="#07122b"/>
+  <path d="M256 342c-46 0-83-37-83-83h28c0 30 25 55 55 55s55-25 55-55h28c0 46-37 83-83 83z" fill="#19c37d"/>
+  <text x="256" y="452" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700" text-anchor="middle" fill="#ffffff">96.5</text>
+</svg>

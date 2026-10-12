@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07122b" />
+  <meta name="description" content="Radio Fiesta 96.5 FM - Emisora oficial desde Tacna, Perú. Folklor, Cumbia Sureña, Entretenimiento, Deporte y Cultura. Escucha en vivo." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Radio Fiesta 96.5" />
+  <meta property="og:title" content="Radio Fiesta 96.5 FM - Tacna, Perú" />
+  <meta property="og:description" content="Folklor, Cumbia Sureña, Entretenimiento, Deporte y Cultura. Escúchanos en directo." />
+  <meta property="og:image" content="https://i.ibb.co/204KPpB8/Radio-Fiesta.jpg" />
+  <meta property="og:type" content="website" />
+  <title>Radio Fiesta 96.5 FM · Tacna, Perú</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://sp.oyotunstream.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <div id="particles" class="particles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.jpg" onerror="this.onerror=null;this.src='https://i.ibb.co/204KPpB8/Radio-Fiesta.jpg'" alt="Radio Fiesta 96.5 FM" />
+      <div class="brand-txt">
+        <strong>Radio Fiesta</strong>
+        <span>96.5 FM · Tacna, Perú</span>
+      </div>
+    </div>
+    <span class="live-badge" id="liveBadge"><i></i>EN VIVO</span>
+    <button id="installBtn" class="ghost hidden" type="button">Instalar App</button>
+    <span id="netStatus" class="net" title="Estado de conexión"></span>
+  </header>
+
+  <main class="layout">
+
+    <section class="player-card" id="playerCard">
+      <div class="eq" id="eq" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="disc-wrap">
+        <div class="disc-glow"></div>
+        <div class="disc-rings"></div>
+        <div class="disc" id="disc">
+          <img src="assets/logo.jpg" onerror="this.onerror=null;this.src='https://i.ibb.co/204KPpB8/Radio-Fiesta.jpg'" alt="Logo Radio Fiesta 96.5 FM" />
+        </div>
+        <div class="disc-badge">96.5</div>
+      </div>
+
+      <h1 class="station-title">Radio Fiesta 96.5 FM</h1>
+      <p class="station-sub">Tacna · Perú <span class="dot-sep"></span> <span id="qualityTag">Streaming en vivo</span></p>
+
+      <div class="now-playing" aria-live="polite">
+        <span class="np-label">Suena ahora</span>
+        <div class="np-title" id="npTitle">Conectando con la emisora…</div>
+        <div class="np-artist muted" id="npArtist"></div>
+        <div class="np-meta muted" id="npMeta"></div>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="ctrl" type="button" aria-label="Volumen menos">&#8722;</button>
+        <button id="playBtn" class="ctrl primary" type="button" aria-label="Reproducir">
+          <span class="play-icon" id="playIcon"></span>
+        </button>
+        <button id="nextBtn" class="ctrl" type="button" aria-label="Volumen más">&#43;</button>
+      </div>
+
+      <div class="volume-row">
+        <button id="muteBtn" class="icon-btn" type="button" aria-label="Silenciar" title="Silenciar">
+          <span id="muteIcon">&#128266;</span>
+        </button>
+        <input id="volume" class="slider" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volumen" />
+        <button id="shareBtn" class="icon-btn" type="button" aria-label="Compartir" title="Compartir">&#128228;</button>
+      </div>
+
+      <p id="statusMsg" class="status-msg"></p>
+    </section>
+
+    <section class="card about">
+      <h2 class="card-title"><span class="ic ic-blue"></span>Sobre la emisora</h2>
+      <p class="about-text">
+        Radio Fiesta 96.5 FM es una emisora que transmite su señal desde la ciudad de
+        <strong>Tacna, Perú</strong>, con una programación de <strong>Folklor</strong>,
+        <strong>Cumbia Sureña</strong>, Entretenimiento, Deporte, Cultura y Publicidad de eventos.
+      </p>
+      <div class="tags">
+        <span class="tag t-blue">Folklor</span>
+        <span class="tag t-green">Cumbia Sureña</span>
+        <span class="tag t-yellow">Entretenimiento</span>
+        <span class="tag t-blue">Deporte</span>
+        <span class="tag t-green">Cultura</span>
+        <span class="tag t-yellow">Publicidad</span>
+      </div>
+    </section>
+
+    <section class="card socials">
+      <h2 class="card-title"><span class="ic ic-green"></span>Síguenos en redes</h2>
+      <div class="social-grid" id="socialGrid"></div>
+    </section>
+
+    <section class="card history">
+      <div class="card-head">
+        <h2 class="card-title"><span class="ic ic-yellow"></span>Historial de canciones</h2>
+        <button id="clearHistory" class="ghost small" type="button">Limpiar</button>
+      </div>
+      <ul id="historyList" class="history-list"></ul>
+      <p id="historyEmpty" class="muted history-empty">Aún no hay canciones registradas.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Radio Fiesta 96.5 FM</strong> Diseñado por DJ Wilmer</p>
+    <p class="muted">© <span id="year"></span> Radio Fiesta 96.5 FM  · Tacna, Perú. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Radio Fiesta 96.5 FM - Tacna, Perú",
+  "short_name": "Radio Fiesta",
+  "description": "Radio Fiesta 96.5 FM - Emisora oficial desde Tacna, Perú. Folklor, Cumbia Sureña, Entretenimiento, Deporte y Cultura.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#050b1a",
+  "theme_color": "#07122b",
+  "categories": ["music", "entertainment", "news"],
+  "lang": "es-PE",
+  "dir": "ltr",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
